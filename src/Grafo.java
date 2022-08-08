@@ -52,4 +52,20 @@ public class Grafo<T> {
 		System.out.println("O grafo possui: " + contador + " bordas");
 	}
 	
+	 @Override
+	    public String toString()
+	    {
+	        StringBuilder builder = new StringBuilder();
+	 
+	        for (T v : map.keySet()) {
+	            builder.append(v.toString() + ": ");
+	            for (T w : map.get(v)) {
+	                builder.append(w.toString() + " ");
+	            }
+	            builder.append("\n");
+	        }
+	 
+	        return (builder.toString());
+	    }
+	
 }
