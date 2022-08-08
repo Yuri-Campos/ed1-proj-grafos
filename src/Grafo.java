@@ -51,6 +51,28 @@ public class Grafo<T> {
 		}
 		System.out.println("O grafo possui: " + contador + " bordas");
 	}
+	public void temVertice(T s)
+    {
+        if (map.containsKey(s)) {
+            System.out.println("A civilizacao contém:  "
+                               + s + " como cidade.");
+        }
+        else {
+            System.out.println("A civilizacao nao contem "
+                               + s + " como cidade.");
+        }
+    }
+	public void temLigacao(T s, T d)
+    {
+        if (map.get(s).contains(d)) {
+            System.out.println("As cidades "
+                               + s + " e " + d + " se conectam.");
+        }
+        else {
+            System.out.println("As cidades "
+                               + s + " e " + d + " nao se conectam");
+        }
+    }
 	
 	 @Override
 	    public String toString()
